@@ -2,6 +2,7 @@ import "./comp.css";
 
 import { useEffect, useState } from "react";
 import RestaurantCard from "./RestaurantCard";
+import ShimmerUI from "./ShimmerUI";
 
 const Body = () => {
 	const [allRestaurants, setAllRestaurants] = useState([]);
@@ -19,11 +20,35 @@ const Body = () => {
 		getRestaurantData();
 	}, []);
 
+	// return allRestaurants?.length === 0 ? (
+	// 	<div className="restaurant-list">
+	// 		{Array(15)
+	// 			.fill("")
+	// 			.map((s, index) => (
+	// 				<ShimmerUI key={index} />
+	// 			))}
+	// 	</div>
+	// ) : (
+	// 	<div className="restaurant-list">
+	// 		{allRestaurants?.map((restaurant) => {
+	// 			return (
+	// 				<RestaurantCard {...restaurant?.data} key={restaurant?.data.id} />
+	// 			);
+	// 		})}
+	// 	</div>
+	// );
+
 	return (
 		<div className="restaurant-list">
-			{allRestaurants.map((restaurant) => {
-				return <RestaurantCard {...restaurant.data} key={restaurant.data.id} />;
-			})}
+			{allRestaurants?.length === 0
+				? Array(15)
+						.fill("")
+						.map((s, index) => <ShimmerUI key={index} />)
+				: allRestaurants?.map((restaurant) => {
+						return (
+							<RestaurantCard {...restaurant?.data} key={restaurant?.data.id} />
+						);
+				  })}
 		</div>
 	);
 };
