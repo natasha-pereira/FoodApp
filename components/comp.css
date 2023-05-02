@@ -1,0 +1,66 @@
+.header-container {
+	margin: 1rem;
+	/* border: 0.3rem outset grey; */
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo {
+	display: flex;
+	align-items: center;
+}
+
+.logo-img {
+	width: 6rem;
+	height: 6rem;
+	border-radius: 2rem;
+	padding: 1rem;
+}
+
+.nav-items > ul {
+	display: flex;
+	justify-content: space-around;
+}
+
+.nav-items > ul > li {
+	list-style: none;
+	padding: 0.6rem;
+	margin: 1rem;
+}
+
+/* to display the restaurant list */
+.restaurant-list {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+/* for restaurant card */
+.restaurant-card {
+	width: 10rem;
+	/* height: 12rem; */
+	border: 0.1rem solid grey;
+	margin: 1rem;
+	padding: 0.3rem;
+	/* display: flex;
+	flex-direction: column; */
+}
+
+.food-image {
+	width: 100%;
+}
+
+.search-box {
+	width: 20rem;
+	height: 1.2rem;
+}
+
+.search-button {
+	width: 4rem;
+	height: 1.2rem;
+	margin: 0.8rem;
+}
+
+.footer {
+	margin: 1rem;
+}
