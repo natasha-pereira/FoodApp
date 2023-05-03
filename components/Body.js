@@ -46,7 +46,10 @@ const Body = () => {
 						.map((s, index) => <ShimmerUI key={index} />)
 				: allRestaurants?.map((restaurant) => {
 						return (
-							<RestaurantCard {...restaurant?.data} key={restaurant?.data.id} />
+							<RestaurantCard
+								{...restaurant?.data}
+								key={restaurant?.data?.id}
+							/>
 						);
 				  })}
 		</div>
