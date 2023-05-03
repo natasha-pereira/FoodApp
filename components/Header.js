@@ -1,6 +1,7 @@
 import "./comp.css";
 
 import SearchInput from "./SearchInput";
+import { Link } from "react-router-dom";
 
 const Header = () => {
 	return (
@@ -17,7 +18,9 @@ const Header = () => {
 				<ul>
 					{/* <li>Search</li> */}
 					<li>Search</li>
-					<li>Offers</li>
+					<li>
+						<Link to="/offers"></Link>Offers
+					</li>
 					<li>Help</li>
 					<li>Sign in</li>
 					<li>Cart</li>

@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import Body from "./components/Body";
 import Footer from "./components/Footer";
 import Offers from "./components/Offers";
+import ErrorPage from "./components/ErrorPage";
 
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 
@@ -32,6 +33,7 @@ const appRouter = createBrowserRouter([
 				element: <Offers />,
 			},
 		],
+		errorElement: <ErrorPage />,
 	},
 	// {
 	// 	path: "/offers",
