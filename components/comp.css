@@ -1,10 +1,10 @@
 .header-container {
 	/* margin: 1rem; */
-	/* border: 0.3rem outset grey; */
+	border: 0.3rem solid grey;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	background-color: white;
+	background-color: whitesmoke;
 	box-shadow: 0.3rem grey;
 	position: sticky;
 	top: 0;
@@ -16,10 +16,15 @@
 }
 
 .logo-img {
-	width: 6rem;
-	height: 6rem;
+	width: 5rem;
+	height: 5rem;
 	border-radius: 2rem;
 	padding: 1rem;
+}
+
+.logo > h2 {
+	color: rgb(255, 132, 0);
+	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .nav-items > ul {
@@ -36,6 +41,8 @@
 .links {
 	text-decoration: none;
 	color: black;
+	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+	font-size: large;
 }
 
 /* to display the restaurant list */
@@ -60,6 +67,7 @@
 
 .search-item {
 	text-align: center;
+	margin: 2rem;
 }
 
 .search-box {
@@ -70,7 +78,7 @@
 }
 
 .search-button {
-	width: 2rem;
+	width: 4rem;
 	height: 2.6rem;
 	margin-left: 0.4rem;
 	border-radius: 0.2rem;
