@@ -8,6 +8,7 @@ import Offers from "./components/Offers";
 import ErrorPage from "./components/ErrorPage";
 
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import SearchInput from "./components/SearchInput";
 
 const App = () => {
 	return (
@@ -27,6 +28,10 @@ const appRouter = createBrowserRouter([
 			{
 				path: "/",
 				element: <Body />,
+			},
+			{
+				path: "/search",
+				element: <SearchInput />,
 			},
 			{
 				path: "/offers",

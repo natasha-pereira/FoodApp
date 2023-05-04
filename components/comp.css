@@ -1,10 +1,13 @@
 .header-container {
-	margin: 1rem;
+	/* margin: 1rem; */
 	/* border: 0.3rem outset grey; */
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	background-color: white;
 	box-shadow: 0.3rem grey;
+	position: sticky;
+	top: 0;
 }
 
 .logo {
@@ -30,6 +33,11 @@
 	margin: 1rem;
 }
 
+.links {
+	text-decoration: none;
+	color: black;
+}
+
 /* to display the restaurant list */
 .restaurant-list {
 	display: flex;
@@ -48,15 +56,25 @@
 	width: 100%;
 }
 
+/* for search component */
+
+.search-item {
+	text-align: center;
+}
+
 .search-box {
-	width: 20rem;
-	height: 1.2rem;
+	width: 60%;
+	height: 2.5rem;
+	border-radius: 0.2rem;
+	border-color: lightgray;
 }
 
 .search-button {
-	width: 4rem;
-	height: 1.2rem;
-	margin: 0.8rem;
+	width: 2rem;
+	height: 2.6rem;
+	margin-left: 0.4rem;
+	border-radius: 0.2rem;
+	border-color: lightgray;
 }
 
 /* for offers page */
@@ -102,4 +120,5 @@
 
 .footer {
 	margin: 1rem;
+	background-color: white;
 }

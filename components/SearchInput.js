@@ -5,7 +5,7 @@ const SearchInput = () => {
 	const [searchtext, setSearchText] = useState("");
 
 	return (
-		<div>
+		<div className="search-item">
 			<input
 				className="search-box"
 				placeholder="Search here for tasty food!"
