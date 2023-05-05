@@ -6,9 +6,10 @@ import Body from "./components/Body";
 import Footer from "./components/Footer";
 import Offers from "./components/Offers";
 import ErrorPage from "./components/ErrorPage";
+import SearchInput from "./components/SearchInput";
+import HelpPage from "./components/HelpPage";
 
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
-import SearchInput from "./components/SearchInput";
 
 const App = () => {
 	return (
@@ -36,6 +37,10 @@ const appRouter = createBrowserRouter([
 			{
 				path: "/offers",
 				element: <Offers />,
+			},
+			{
+				path: "/help",
+				element: <HelpPage />,
 			},
 		],
 		errorElement: <ErrorPage />,
