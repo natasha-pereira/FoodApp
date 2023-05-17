@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const Header = () => {
 	return (
 		<div className="header-container">
-			<Link className="links" to="/">
+			<Link className="link-logo" to="/">
 				<div className="logo">
 					<img
 						className="logo-img"
@@ -19,22 +19,22 @@ const Header = () => {
 			<div className="nav-items">
 				<ul>
 					<li>
-						<Link className="links" to="/search">
+						<Link className="link-logo" to="/search">
 							Search
 						</Link>
 					</li>
 					<li>
-						<Link className="links" to="/offers">
+						<Link className="link-logo" to="/offers">
 							Offers
 						</Link>
 					</li>
 					<li>
-						<Link className="links" to="/help">
+						<Link className="link-logo" to="/help">
 							Help
 						</Link>
 					</li>
 					<li>
-						<Link className="links" to="/sign-in">
+						<Link className="link-logo" to="/sign-in">
 							Sign in
 						</Link>
 					</li>

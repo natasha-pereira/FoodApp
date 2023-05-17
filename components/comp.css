@@ -38,11 +38,19 @@
 	margin: 1rem;
 }
 
-.links {
+/* for Links */
+
+.link-logo {
 	text-decoration: none;
 	color: black;
 	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 	font-size: large;
+}
+
+.link {
+	text-decoration: none;
+	color: black;
+	font-family: "Franklin Gothic", "Arial Narrow", Arial, sans-serif;
 }
 
 /* to display the restaurant list */
@@ -54,6 +62,7 @@
 /* for restaurant card */
 .restaurant-card {
 	width: 10rem;
+	height: 18rem;
 	border: 0.1rem solid lightgrey;
 	margin: 1rem;
 	padding: 0.3rem;
@@ -107,7 +116,7 @@
 	/* margin: 1rem; */
 	width: 100%;
 	height: 13rem;
-	background-color: #025b6f;
+	background-color: #37718e;
 	color: whitesmoke;
 	display: flex;
 	flex-direction: row;
@@ -127,7 +136,7 @@
 .help-page {
 	width: 100%;
 	height: 100vh;
-	background-color: #025b6f;
+	background-color: #37718e;
 	color: whitesmoke;
 	padding: 2rem;
 }

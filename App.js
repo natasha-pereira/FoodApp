@@ -8,6 +8,7 @@ import Offers from "./components/Offers";
 import ErrorPage from "./components/ErrorPage";
 import SearchInput from "./components/SearchInput";
 import HelpPage from "./components/HelpPage";
+import RestaurantPage from "./components/ReastaurantPage";
 
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 
@@ -41,6 +42,10 @@ const appRouter = createBrowserRouter([
 			{
 				path: "/help",
 				element: <HelpPage />,
+			},
+			{
+				path: "/restaurant/:id",
+				element: <RestaurantPage />,
 			},
 		],
 		errorElement: <ErrorPage />,

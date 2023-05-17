@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import RestaurantCard from "./RestaurantCard";
 import ShimmerUI from "./ShimmerUI";
 
+import { Link } from "react-router-dom";
+
 const Body = () => {
 	const [allRestaurants, setAllRestaurants] = useState([]);
 
@@ -46,10 +48,13 @@ const Body = () => {
 						.map((s, index) => <ShimmerUI key={index} />)
 				: allRestaurants?.map((restaurant) => {
 						return (
-							<RestaurantCard
-								{...restaurant?.data}
+							<Link
+								className="link"
+								to={"/restaurant/" + restaurant?.data?.id}
 								key={restaurant?.data?.id}
-							/>
+							>
+								<RestaurantCard {...restaurant?.data} />
+							</Link>
 						);
 				  })}
 		</div>
