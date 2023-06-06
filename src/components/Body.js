@@ -1,4 +1,4 @@
-import "./comp.css";
+// import "./comp.css";
 
 import RestaurantCard from "./RestaurantCard";
 import ShimmerUI from "./ShimmerUI";
@@ -28,7 +28,7 @@ const Body = () => {
 	// );
 
 	return (
-		<div className="restaurant-list">
+		<div className="flex flex-wrap justify-between max-w-full restaurant-list">
 			{allRestaurants?.length === 0
 				? Array(15)
 						.fill("")
