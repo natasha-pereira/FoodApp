@@ -9,7 +9,7 @@ export const useRestaurantdata = () => {
 
 	const getRestaurantData = async () => {
 		const fetchData = await fetch(
-			"https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9141417&lng=74.8559568&page_type=DESKTOP_WEB_LISTING"
+			"https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9715987&lng=77.5945627&page_type=DESKTOP_WEB_LISTING"
 		);
 		const fetchedData = await fetchData.json();
 		setAllRestaurants(fetchedData?.data?.cards[2]?.data?.data?.cards);

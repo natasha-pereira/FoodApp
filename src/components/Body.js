@@ -28,7 +28,7 @@ const Body = () => {
 	// );
 
 	return (
-		<div className="flex flex-wrap justify-between max-w-full restaurant-list">
+		<div className="flex flex-wrap justify-between max-w-full mx-4 restaurant-list">
 			{allRestaurants?.length === 0
 				? Array(15)
 						.fill("")
