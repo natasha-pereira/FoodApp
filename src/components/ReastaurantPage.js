@@ -3,11 +3,19 @@ import "./comp.css";
 // import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useRestaurantpage } from "../utils/useRestaurantpage";
+import { useDispatch } from "react-redux";
+import { addItem } from "../utils/cartSlice";
 
 const RestaurantPage = () => {
 	const { id } = useParams();
 
 	const [menu, restaurant] = useRestaurantpage(id);
+
+	const dispatch = useDispatch();
+
+	const handleAddItem = (item) => {
+		dispatch(addItem(item));
+	};
 
 	const resImage =
 		"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/" +
@@ -57,7 +65,10 @@ const RestaurantPage = () => {
 										items?.card?.info?.imageId
 									}
 								/>
-								<button className="m-4 w-20 border border-orange-400 text-center text-orange-500 font-bold text-base rounded-md">
+								<button
+									className="m-4 w-20 border border-orange-400 text-center text-orange-500 font-bold text-base rounded-md"
+									onClick={() => handleAddItem(items?.card?.info?.name)}
+								>
 									Add +
 								</button>
 							</div>

@@ -1,9 +1,12 @@
 // import "./comp.css";
 
+import { useSelector } from "react-redux";
 import SearchInput from "./SearchInput";
 import { Link } from "react-router-dom";
 
 const Header = () => {
+	const cartItems = useSelector((s) => s.cart.items);
+
 	return (
 		<div className="header-container flex justify-between items-center border m-4">
 			<Link className="link-logo" to="/">
@@ -19,26 +22,25 @@ const Header = () => {
 			<div className="nav-items">
 				<ul className="flex justify-around px-4">
 					<li className="px-4">
-						<Link className="link-logo" to="/search">
-							Search
-						</Link>
+						<Link to="/search">Search</Link>
 					</li>
 					<li className="px-4">
-						<Link className="link-logo" to="/offers">
-							Offers
-						</Link>
+						<Link to="/offers">Offers</Link>
 					</li>
 					<li className="px-4">
-						<Link className="link-logo" to="/help">
-							Help
-						</Link>
+						<Link to="/help">Help</Link>
 					</li>
 					<li className="px-4">
-						<Link className="link-logo" to="/sign-in">
-							Sign in
-						</Link>
+						<Link to="/sign-in">Sign in</Link>
 					</li>
-					<li className="px-4">Cart</li>
+					<li className="flex items-center px-4">
+						<Link to="/cart">Cart </Link>
+						{cartItems.length > 0 ? (
+							<span class="inline-flex items-center justify-center w-4 h-4 ml-2 text-xs font-semibold text-white bg-orange-500 rounded-full">
+								{cartItems.length}
+							</span>
+						) : null}
+					</li>
 				</ul>
 			</div>
 		</div>

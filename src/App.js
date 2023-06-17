@@ -11,14 +11,17 @@ import HelpPage from "./components/HelpPage";
 import RestaurantPage from "./components/ReastaurantPage";
 
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import { Provider } from "react-redux";
+import store from "./utils/store";
+import Cart from "./components/Cart";
 
 const App = () => {
 	return (
-		<>
+		<Provider store={store}>
 			<Header />
 			<Outlet />
 			<Footer />
-		</>
+		</Provider>
 	);
 };
 
@@ -46,6 +49,10 @@ const appRouter = createBrowserRouter([
 			{
 				path: "/restaurant/:id",
 				element: <RestaurantPage />,
+			},
+			{
+				path: "/cart",
+				element: <Cart />,
 			},
 		],
 		errorElement: <ErrorPage />,
