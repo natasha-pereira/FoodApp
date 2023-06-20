@@ -9,7 +9,6 @@
 	"name": "foodapp",
 	"description": "A clone of food ordering app",
 	"version": "1.0.0",
-	"main": "index.js",
 	"devDependencies": {
 		"parcel": "^2.8.3",
 		"postcss": "^8.4.24",
