@@ -1,4 +1,4 @@
-import "./comp.css";
+// import "./comp.css";
 
 import { useRouteError, Link } from "react-router-dom";
 

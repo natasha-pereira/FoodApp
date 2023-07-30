@@ -1,4 +1,4 @@
-import "./comp.css";
+// import "./comp.css";
 
 // import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
@@ -41,7 +41,7 @@ const RestaurantPage = () => {
 				</div>
 			</div>
 			<div className="mx-60">
-				{menu.map((items, index) => {
+				{menu?.map((items, index) => {
 					return (
 						<div
 							key={index}

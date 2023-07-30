@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "./comp.css";
+// import "./comp.css";
 
 const Section = ({ title, description, isVisible, setIsVisible }) => {
 	const [visible, setVisible] = useState(isVisible);

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useRestaurantdata } from "../utils/useRestaurantdata";
 import RestaurantCard from "./RestaurantCard";
-import "./comp.css";
+// import "./comp.css";
 
 const SearchInput = () => {
 	const [searchtext, setSearchText] = useState("");
